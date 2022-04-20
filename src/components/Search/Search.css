@@ -1,0 +1,20 @@
+#Search {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text-field {
+    margin-right: 1em;
+    margin-left: 1em;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.button-inputs {
+    margin-top: 1em;
+}
+
+.radio-button {
+    margin-right: 1em;
+    margin-left: 1em;
+    font-size: 24px;
+}
