@@ -7,6 +7,7 @@
 
 .text-field {
     width: 45%;
+    text-align: center;
 }
 
 .button-inputs {
@@ -16,6 +17,13 @@
     margin-top: 1em;
     display: flex;
     justify-content: space-around;
+}
+
+.submit-button {
+    width: 100px;
+    height: 30px;
+    margin-top: 1em;
+    font-family: 'Open Sans', sans-serif;
 }
 
 @media screen and (max-width: 800px) {

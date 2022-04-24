@@ -1,5 +1,5 @@
 .Card {
-    width: 75%;
+    width: 33.33333%;
     height: 350px;
     padding: 1em;
     border-radius: 5px;
@@ -13,9 +13,23 @@
     align-items: center;
 }
 
+.Card h2 {
+  margin: 0;
+}
+
+.post-thumbnail {
+  height: 75%;
+}
+
 .post-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     width: 95%;
+}
+
+@media screen and (max-width: 800px) {
+  .Card {
+    width: 75%;
+  }
 }
