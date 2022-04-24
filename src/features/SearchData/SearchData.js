@@ -39,7 +39,6 @@ const SearchData = props => {
       dispatch(setSortBy(sortByInput));
   }
 
-
   return (
     <div id='Form'>
         <form id="input-form">

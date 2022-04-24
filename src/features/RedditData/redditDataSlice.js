@@ -1,6 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { useSelector } from 'react-redux';
-import { selectSearchTerm, selectSubreddit, selectSortBy } from '../SearchData/searchDataSlice';
 
 const initialSliceState = {
     posts: [
@@ -43,7 +41,6 @@ export const loadPosts = createAsyncThunk(
     'redditData/loadPosts',
     async ({ sortBy, searchTerm }, thunkAPI) => {
         const url = `https://cors-anywhere.herokuapp.com/reddit.com/search.json?q=${searchTerm}&sort=${sortBy}`;
-        console.log(url);
         const json = await fetch(url)
             .then(res => res.json())
             .catch(error => {
@@ -75,5 +72,7 @@ export const redditDataSlice = createSlice({
 })
 
 export const selectPosts = (state) => state.redditData.posts;
+export const selectIsLoading = (state) => state.redditData.isLoading;
+export const selectHasError = (state) => state.redditData.hasError;
 
 export default redditDataSlice.reducer;
