@@ -1,5 +1,5 @@
 .Card {
-    width: 33.33333%;
+    width: 33%;
     height: 350px;
     padding: 1em;
     border-radius: 5px;
@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
 .Card h2 {
@@ -39,6 +40,6 @@
 
 @media screen and (max-width: 800px) {
   .Card {
-    width: 75%;
+    width: 50%;
   }
 }
