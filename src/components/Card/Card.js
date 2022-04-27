@@ -1,6 +1,5 @@
 import './Card.css';
 import React from 'react'
-import PropTypes from 'prop-types'
 import fromNow from 'from-now';
 import { Icon } from 'semantic-ui-react';
 
@@ -26,7 +25,5 @@ const Card = props => {
         </div>
   )
 }
-
-Card.propTypes = {}
 
 export default Card

@@ -1,14 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import './SearchData.css'
 import { useSelector, useDispatch } from 'react-redux';
 import {
-    setSubreddit,
-    clearSubreddit,
     setSearchTerm,
-    clearSearchTerm,
     setSortBy,
-    selectSubreddit,
     selectSearchTerm,
     selectSortBy
 } from './searchDataSlice.js';
@@ -98,7 +93,5 @@ const SearchData = props => {
     </div>
   )
 }
-
-SearchData.propTypes = {}
 
 export default SearchData

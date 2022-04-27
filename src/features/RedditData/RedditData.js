@@ -1,14 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Card from '../../components/Card/Card';
 import './RedditData.css'
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectPosts, selectIsLoading } from './redditDataSlice';
 import { Loader } from 'semantic-ui-react';
 
 
 const RedditData = props => {
-  const dispatch = useDispatch();
   const posts = useSelector(selectPosts);
   const isLoading = useSelector(selectIsLoading);
 
@@ -31,7 +29,5 @@ const RedditData = props => {
     </div>
   )
 }
-
-RedditData.propTypes = {}
 
 export default RedditData
