@@ -24,6 +24,7 @@ const RedditData = props => {
                 created={post['data'].created}
                 num_comments={post['data'].num_comments}
                 url={post['data'].url}
+                permalink={post['data'].permalink}
             />
           ))
         }

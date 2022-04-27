@@ -1,4 +1,5 @@
 .Card {
+    font-family: 'Radio Canada', sans-serif;
     width: 33%;
     height: 350px;
     padding: 1em;
@@ -7,15 +8,56 @@
     margin: .5em;
     box-shadow: 4px 3px 8px 1px #969696;
   	-webkit-box-shadow: 4px 3px 8px 1px #969696;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 100%;
+    column-gap: 5px;
     overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.Card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 5px;
+  box-shadow: 6px 4.5px 12px 1.5px #646464;
+  -webkit-box-shadow: 6px 4.5px 12px 1.5px #646464;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.Card:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.Card:hover::after {
+  opacity: 1;
+}
+
+.card-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Card h2 {
   margin: 0;
+}
+
+.Card a {
+  text-decoration: none;
+  color: black;
 }
 
 .post-title {
@@ -28,7 +70,8 @@
 }
 
 .post-thumbnail {
-  height: 50%;
+  width: 66%;
+  max-height: 66%;
 }
 
 .post-info {
@@ -36,10 +79,22 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     width: 95%;
+    font-size: 12px;
 }
 
-@media screen and (max-width: 800px) {
+.attribution .timestamp .comments {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 600px) and  (max-width: 1200px) {
   .Card {
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .Card {
+    width: 95%;
   }
 }
