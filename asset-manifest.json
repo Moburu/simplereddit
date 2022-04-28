@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/simplereddit/static/css/main.fb993d4f.css",
-    "main.js": "/simplereddit/static/js/main.57bf3e79.js",
+    "main.js": "/simplereddit/static/js/main.f4e29cce.js",
     "static/media/icons.svg": "/simplereddit/static/media/icons.18df003f90a7f1313b98.svg",
     "static/media/brand-icons.svg": "/simplereddit/static/media/brand-icons.3c45c98f6f6c1b009c08.svg",
     "static/media/icons.eot": "/simplereddit/static/media/icons.7eefe04dc985dd4ad38b.eot",
@@ -20,10 +20,10 @@
     "static/media/outline-icons.woff2": "/simplereddit/static/media/outline-icons.c52405129ae48097815d.woff2",
     "index.html": "/simplereddit/index.html",
     "main.fb993d4f.css.map": "/simplereddit/static/css/main.fb993d4f.css.map",
-    "main.57bf3e79.js.map": "/simplereddit/static/js/main.57bf3e79.js.map"
+    "main.f4e29cce.js.map": "/simplereddit/static/js/main.f4e29cce.js.map"
   },
   "entrypoints": [
     "static/css/main.fb993d4f.css",
-    "static/js/main.57bf3e79.js"
+    "static/js/main.f4e29cce.js"
   ]
 }
