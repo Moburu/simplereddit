@@ -16,7 +16,7 @@ const RedditData = props => {
           posts.map((post) => (
             <Card
                 title={post['data'].title}
-                thumbnail={post['data'].thumbnail === 'self' || post['data'].thumbnail === 'default' || post['data'].thumbnail === 'image' || post['data'].thumbnail === 'spoiler' ? 'https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png' : post['data'].thumbnail}
+                thumbnail={post['data'].thumbnail === 'self' || post['data'].thumbnail === 'default' || post['data'].thumbnail === 'nsfw' || post['data'].thumbnail === 'spoiler' ? 'https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png' : post['data'].thumbnail}
                 score={post['data'].score}
                 author={post['data'].author}
                 created={post['data'].created}

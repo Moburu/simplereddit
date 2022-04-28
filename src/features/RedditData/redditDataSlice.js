@@ -1,41 +1,23 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialSliceState = {
-    posts: [
-        {
-            data: {
-                title: 'Lorem Ipsum',
-                thumbnail: 'https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png',
-                score: 1,
-                author: 'John Doe',
-                created: 1200000,
-                num_comments: 47,
-                url: 'idk.com'
-            }},
-        {
-            data: {
-                title: 'Lorem Ipsum',
-                thumbnail: 'https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png',
-                score: 1,
-                author: 'John Doe',
-                created: 1200000,
-                num_comments: 47,
-                url: 'idk.com'
-        }},
-        {
-            data: {
-                title: 'Lorem Ipsum',
-                thumbnail: 'https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png',
-                score: 1,
-                author: 'John Doe',
-                created: 1200000,
-                num_comments: 47,
-                url: 'idk.com'
-        }}
-    ],
+    posts: [],
     isLoading: false,
     hasError: false
 }
+
+export const loadPopular = createAsyncThunk(
+    'redditData/loadPopular',
+    async (args, thunkAPI) => {
+        const url = `https://cors-anywhere.herokuapp.com/reddit.com/r/popular.json?`;
+        const json = await fetch(url)
+            .then(res => res.json())
+            .catch(error => {
+                console.error('Error: ', error)
+            });
+        return json['data']['children'];
+    }
+)
 
 export const loadPosts = createAsyncThunk(
     'redditData/loadPosts',
@@ -65,6 +47,19 @@ export const redditDataSlice = createSlice({
             state.hasError = false;
         },
         [loadPosts.rejected]: (state, action) => {
+            state.isLoading = false;
+            state.hasError = true;
+        },
+        [loadPopular.pending]: (state, action) => {
+            state.isLoading = true;
+            state.hasError = false;
+        },
+        [loadPopular.fulfilled]:(state, action) => {
+            state.posts = action.payload;
+            state.isLoading = false;
+            state.hasError = false;
+        },
+        [loadPopular.rejected]: (state, action) => {
             state.isLoading = false;
             state.hasError = true;
         }

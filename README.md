@@ -12,5 +12,5 @@ Technologies used:
 Future updates planned:
 - Add a clear search button
 - Add the option to search by subreddit
-- Better theming
 - Cleaner CSS
+- Smaller placeholder image so as to show more lines of title text
