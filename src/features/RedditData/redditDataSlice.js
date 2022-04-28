@@ -9,7 +9,7 @@ const initialSliceState = {
 export const loadPopular = createAsyncThunk(
     'redditData/loadPopular',
     async (args, thunkAPI) => {
-        const url = `https://cors-anywhere.herokuapp.com/reddit.com/r/popular.json?`;
+        const url = `https://reddit.com/r/popular.json`;
         const json = await fetch(url)
             .then(res => res.json())
             .catch(error => {
@@ -22,7 +22,7 @@ export const loadPopular = createAsyncThunk(
 export const loadPosts = createAsyncThunk(
     'redditData/loadPosts',
     async ({ sortBy, searchTerm }, thunkAPI) => {
-        const url = `https://cors-anywhere.herokuapp.com/reddit.com/search.json?q=${searchTerm}&sort=${sortBy}`;
+        const url = `https://reddit.com/search.json?q=${searchTerm}&sort=${sortBy}`;
         const json = await fetch(url)
             .then(res => res.json())
             .catch(error => {
