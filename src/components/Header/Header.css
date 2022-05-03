@@ -1,8 +1,18 @@
 #Header {
     font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #Header h1 {
     font-size: 48px;
-    margin: .5em;
+    margin-top: .25em;
+    margin-bottom: .25em;
+    margin-left: .1em;
+    vertical-align: middle;
+}
+
+.logo {
+    height: 48px;
 }
