@@ -13,6 +13,19 @@
     vertical-align: middle;
 }
 
+.invisible {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.button-link {
+    z-index: 1;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+
 .logo {
     height: 48px;
 }
