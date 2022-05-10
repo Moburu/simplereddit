@@ -1,8 +1,31 @@
 #Header {
     font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #Header h1 {
     font-size: 48px;
-    margin: .5em;
+    margin-top: .25em;
+    margin-bottom: .25em;
+    margin-left: .1em;
+    vertical-align: middle;
+}
+
+.invisible {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.button-link {
+    z-index: 1;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+
+.logo {
+    height: 48px;
 }

@@ -10,6 +10,7 @@
     text-align: center;
     margin: 1em;
     padding: 5px;
+    background-color: white;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
@@ -28,10 +29,6 @@
     height: 30px;
     margin-top: 2em;
     font-family: 'Open Sans', sans-serif;
-}
-
-@media screen and (max-width: 800px) {
-
 }
 
 @media screen and (min-width: 600px) and  (max-width: 1200px) {
