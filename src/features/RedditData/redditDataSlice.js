@@ -9,7 +9,7 @@ const initialSliceState = {
 export const loadPopular = createAsyncThunk(
     'redditData/loadPopular',
     async (args, thunkAPI) => {
-        const url = `https://api.reddit.com/r/popular.json?`;
+        const url = `https://api.reddit.com/r/popular.json?limit=100`;
         const json = await fetch(url)
             .then(res => res.json())
             .catch(error => {

@@ -11,6 +11,6 @@ Technologies used:
 
 Future updates planned:
 - Add a clear search button
-- Add the option to search by subreddit
-- Cleaner CSS
-- Smaller placeholder image so as to show more lines of title text
+- Add screen size variable to state for reloading back to top button
+- Add a 'load more' button
+- Add modal views when clicking on cards
