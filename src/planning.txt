@@ -1,0 +1,9 @@
+Ideas for future improvements:
+
+1. Remove lame blue animation from links
+2. Make comments text also link to selfpost (maybe even the whole card?)
+3. Make a nice clean icon instead of that ugly placeholder
+4. Fix the blurry images as much as is possible
+5. Better background image
+6. White background on text box
+7. Add subreddit support
